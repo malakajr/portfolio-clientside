@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --shadow-normal:
+           .5rem .5rem 1.5rem #47498C,
+            -.5rem -.5rem 1.5rem #5D5FB6;
+    --shadow-inset:
+            inset .5rem .5rem 1.5rem #47498C,
+            inset -.5rem -.5rem 1.5rem #5D5FB6;
+}
+
+body{
+    background: url("images/sitebg.jpg");
+}
+
+.center-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 0 1.5rem;
+}
+
+.form-container{
+    width: 100%;
+    max-width: 50rem;
+    padding: 3.5rem;
+    margin: auto;
+    border-radius: .8rem;
+    box-shadow: var(--shadow-normal);
+}
+
+input{
+    display: block;
+    width: 100%;
+    color: #dddddd;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-inset);
+    margin-bottom: 3.5rem;
+    outline: none;
+}
+
+input:focus{
+    box-shadow:
+            .5rem .5rem 1.5rem #5D5FB6,
+            -.5rem -.5rem 1.5rem #47498C;
+}
+
+input::placeholder{
+    color: #dddddd;
+}
+
+/*.input-group{
+    display: flex;
+}*/
+
+.input-group input:first-child{
+    margin-right: 3.5rem;
+}
+
+.button{
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #dddddd;
+    background-color: transparent;
+    border: none;
+    border-radius: 2rem;
+    letter-spacing: 2px;
+    outline: none;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-normal);
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus{
+    box-shadow: var(--shadow-inset);
+}
+
+@media screen and (max-width: 600px){
+    .input-group{
+        display: block;
+    }
+
+    .input-group input:first-child{
+        margin-right: 0;
+    }
+}
